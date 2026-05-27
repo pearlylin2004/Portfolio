@@ -1,11 +1,21 @@
-/* Container that holds everything */
+/* 1. Global Dark Reset */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #0f172a; /* Deep tech slate blue background canvas */
+    color: #f8fafc;            /* Crisp off-white text for easy reading */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* 2. Container setup remains clean */
 .portfolio-container {
     display: flex;
     max-width: 1100px;
     margin: 50px auto;
-    gap: 50px; /* Adds space between sidebar and content */
+    gap: 50px; 
     padding: 0 20px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 .sidebar h2, 
@@ -16,11 +26,24 @@
     margin-bottom: 12px; /* Controls the exact gap below each item */
 }
 
-/* Left Column Styling */
+/* Left Column Panel Card */
 .sidebar {
-    flex: 1; /* Takes up 1 part of the width */
+    flex: 1; 
     text-align: center;
-    margin-bottom: 8px;
+    background-color: #1e293b; /* Slightly lighter slate for card depth */
+    padding: 30px 20px;
+    border-radius: 12px;
+    height: fit-content;      
+    border: 1px solid #334155; /* Subtle border to make it pop */
+}
+
+/* Right Column Panel Card */
+.main-content {
+    flex: 2.5; 
+    background-color: #1e293b; /* Matching lighter slate card background */
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #334155;
 }
 
 .profile-img {
@@ -28,11 +51,6 @@
     height: 150px;
     border-radius: 50%; /* Makes your photo a perfect circle */
     object-fit: cover;
-}
-
-/* Right Column Styling */
-.main-content {
-    flex: 2.5; /* Takes up more space than the sidebar */
 }
 
 /* Grid for Interests and Education to sit side-by-side */
@@ -46,21 +64,16 @@
     flex: 1;
 }
 
-.email-container, .download-container {
-    margin-bottom: 8px;
+.email-container, .download-container, .linkedin-container {
+    margin-bottom: 14px;
     position: relative;
-    display: inline-block;
+    display: block;
 }
 
-.email-container {
-    margin-bottom: 8px;
-    position: relative;
-    display: inline-block;
-}
-
-.email-display, .download-display{
+/* Update your interactive text displays */
+.email-display, .download-display, .linkedin-display {
     font-size: 14px;
-    color: #0c4a34; /* Matching your forest green palette theme */
+    color: #4ade80; /* Vibrant tech emerald green for dark mode visibility */
     font-weight: 500;
     cursor: pointer;
     text-decoration: underline;
@@ -68,21 +81,21 @@
     transition: color 0.2s, opacity 0.2s;
 }
 
-/* Make it look interactive on hover */
-.email-display:hover, .download-display:hover{
-    color: #16a34a; /* Lightens slightly when hovered */
-    opacity: 0.8;
+/* Change color when hovering over the text link */
+.email-display:hover, .download-display:hover, .linkedin-display:hover{
+    color: #86efac; /* Lightens up to a soft mint green */
+    opacity: 0.9;
 }
 
-/* Tooltip pop-up box styling */
-.email-display::after, .download-display::after{
+/* Tooltip popup box updates */
+.email-display::after, .download-display::after, .linkedin-display::after {
     content: attr(data-tooltip);
     position: absolute;
     bottom: 130%;
     left: 50%;
     transform: translateX(-50%) scale(0.8);
-    background-color: #333;
-    color: #fff;
+    background-color: #f8fafc; /* Invert tooltip background to white */
+    color: #0f172a;            /* Invert tooltip text to dark slate */
     padding: 4px 8px;
     font-size: 11px;
     border-radius: 4px;
@@ -93,7 +106,7 @@
 }
 
 /* Show the tooltip hover effect */
-.email-display:hover::after, .download-display:hover::after{
+.email-display:hover::after, .download-display:hover::after, .linkedin-display:hover::after{
     opacity: 1;
     transform: translateX(-50%) scale(1);
 }
