@@ -111,7 +111,34 @@
             
             <section id="experince-section" class="experince-section">
                 <h2>Experiences</h2>
+                <div class="experience-grid">
+                    <div class="experience-card compact-card" onclick="openModal('nyc-modal')">
+                        <div class="experience-header">
+                            <h3>Software Engineer Intern</h3>
+                            <span class="tech-tag">RPA / M Language</span>
+                        </div>
+                        <p>Engineered an automated query system for FormSG responses and optimized email marketing workflows, successfully saving 300 man-hours annually. Click to view full pipeline metrics.</p>
+                    </div>
+                </div>
             </section>
+
+            <div id="nyc-modal" class="experience-modal-overlay" onclick="closeModalOnOverlay(event)">
+                <div class="modal-card">
+                    <button class="close-modal-btn compact-card" onclick="closeModal('nyc-modal')">&times;</button>
+                    <div class="modal-header">
+                        <h2>National Youth Council (NYC)</h2>
+                        <span class="tech-tag">C++ / Systems & Level Programming</span>
+                    </div>
+                    <p class="modal-role"><strong>Role:</strong> Software Engineer Intern | Sep 2023 - Aug 2024</p>
+                    <ul class="modal-details-list">
+                        <li><strong>Software Automation: </strong> Developed and optimized a dynamic query system for FormSG responses using M language, automating data storage and saving 300 man-hours per year. </li>
+                        <li><strong>Performance Engineering: </strong> Refactored data transformation queries for email marketing, significantly reducing runtime and enabling the processing of thousands of records monthly. </li>
+                        <li><strong>RPA Development: </strong> Enhanced financial and grant databases bot using UIPath, implementing advanced exception handling to ensure operational stability. </li>
+                        <li><strong>Project Leadership: </strong> Led a cross-institutional project with Nanyang Polytechnic to automate account creation, accelerating the commissioning timeline through technical leadership. </li>
+                        <li><strong>Quality Assurance: </strong> Collaborated on a comprehensive code review checklist to establish quality standards and best practices for current and future automation software. </li>
+                    </ul>
+                </div>
+            </div>
 
             <div class="bottom-grid">
                 <section class="interests">

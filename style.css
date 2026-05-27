@@ -211,24 +211,24 @@ html, body {
 /* ==========================================================================
    7. FEATURED PROJECTS SECTIONS (GRID MODE)
    ========================================================================== */
-.projects-section {
+.projects-section, .experience-section {
     margin-top: 45px;
     margin-bottom: 45px;
 }
 
-.projects-section h2 {
+.projects-section h2, .experience-section h2{
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 24px;
 }
 
-.projects-grid {
+.projects-grid, .experience-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Auto-responsive grid tracks */
     gap: 20px;
 }
 
-.project-card {
+.project-card, .experience-card{
     background-color: #0f172a; /* Deep canvas dark fill inside cards */
     padding: 24px;
     border-radius: 8px;
@@ -236,19 +236,19 @@ html, body {
     transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-.project-card:hover {
+.project-card:hover, .experience-card:hover{
     transform: translateY(-4px); /* Vertical fluid card lift */
     border-color: #4ade80;       /* Card border turns emerald green */
 }
 
-.project-header {
+.project-header, .experience-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 14px;
 }
 
-.project-card h3 {
+.project-card h3, .experience-card h3 {
     margin: 0;
     font-size: 16px;
     color: #f8fafc;
@@ -264,7 +264,7 @@ html, body {
     border: 1px solid #334155;
 }
 
-.project-card p {
+.project-card p, .experience-card p{
     margin: 0;
     font-size: 13px;
     color: #94a3b8;
@@ -313,7 +313,7 @@ html, body {
    9. POPUP MODAL ARCHITECTURE STYLING
    ========================================================================== */
 /* The dark transparent background overlay screen */
-.project-modal-overlay {
+.project-modal-overlay, .experience-modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -331,7 +331,7 @@ html, body {
 }
 
 /* Toggle rule to activate visibility via JavaScript */
-.project-modal-overlay.active {
+.project-modal-overlay.active, .experience-modal-overlay.active {
     opacity: 1;
     pointer-events: auto;
 }
@@ -350,7 +350,7 @@ html, body {
     transition: transform 0.2s ease-in-out;
 }
 
-.project-modal-overlay.active .modal-card {
+.project-modal-overlay.active .modal-card .experience-modal-overlay{
     transform: scale(1);
 }
 
@@ -407,4 +407,15 @@ html, body {
 
 .modal-details-list li strong {
     color: #4ade80; /* Highlight core achievement titles */
+}
+
+/* ==========================================================================
+   OPTIONAL: COMPACT LAYOUT OPTIMIZATIONS
+   ========================================================================== */
+.compact-card {
+    padding: 16px 20px !important; 
+}
+
+.compact-card .project-header, .compact-card .experience-header {
+    margin-bottom: 8px !important;
 }
