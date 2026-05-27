@@ -330,12 +330,6 @@ html, body {
     transition: opacity 0.2s ease-in-out;
 }
 
-/* Toggle rule to activate visibility via JavaScript */
-.project-modal-overlay.active .model-card .experience-modal-overlay.active {
-    opacity: 1;
-    pointer-events: auto;
-}
-
 /* The structural layout details card inside the overlay */
 .modal-card {
     background-color: #1e293b; /* Dark slate card background match */
@@ -350,8 +344,19 @@ html, body {
     transition: transform 0.2s ease-in-out;
 }
 
-.project-modal-overlay.active .modal-card .experience-modal-overlay .model-card{
-    transform: scale(1);
+.project-modal-overlay.active {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+.experience-modal-overlay.active {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+.project-modal-overlay.active .modal-card,
+.experience-modal-overlay.active .modal-card {
+    transform: scale(1) !important;
 }
 
 /* Simple exit button upper-right corner */
