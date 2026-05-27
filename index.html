@@ -3,38 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pearly Lin | Software Engineer Portfolio</title>
+    <title>Pearly Lin | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Pearly Lin Lee Ying</h1>
-        <p>Software Engineering Student | Civic Tech & Automation Enthusiast</p>
-        <nav>
-            <a href="mailto:pearlylin2004@gmail.com">Email</a> | 
-            <a href="https://linkedin.com/in/pearly-lin" target="_blank">LinkedIn</a>
-        </nav>
-    </header>
 
-    <hr>
+    <div class="portfolio-container">
+        
+        <aside class="sidebar">
+            <img src="profile.jpg" alt="Pearly Lin" class="profile-img">
+            <h2>Pearly Lin Lee Ying</h2>
+            <p class="title">Software Engineering Student</p>
+            <p class="organization">SIT & DigiPen</p>
+            
+            <div class="social-icons">
+                <div class="email-container">
+                    <span onclick="copyEmail()" id="email-text" class="email-display" data-tooltip="Click to Copy">
+                    pearlylin2004@gmail.com
+                    </span>
+                </div>
+                <p><a href="https://linkedin.com/in/pearly-lin" target="_blank">LinkedIn</a></p>
+            </div>
+        </aside>
 
-    <section id="experience">
-        <h2>Featured Experience</h2>
-        <div class="job">
-            <h3>Data/Software Engineer Intern — National Youth Council (NYC)</h3>
-            <p><strong>Impact:</strong> Engineered an automated dynamic query system for FormSG data, saving the agency 300 man-hours annually.</p>
-        </div>
-    </section>
+        <main class="main-content">
+            <section class="about">
+                <h2>About Me</h2>
+                <p>Data and Software Engineering student with a strong background in System Architecture, Automation, and Data Engineering...</p>
+                <a href="PearlyLin_Resume.docx" download="PearlyLin_Resume.docx" class="download-btn">📥 Download CV</a>
+            </section>
 
-    <section id="projects">
-        <h2>Technical Projects</h2>
-        <div class="project">
-            <h3>Waterbound (TanukiLab) — Custom Engine & Framework</h3>
-            <p>Built a custom component-based C++ engine with low-level Windows API handling for system interrupts (Ctrl-Alt-Del).</p>
-            <a href="https://github.com/yourname/waterbound" target="_blank">View GitHub Repository</a>
-        </div>
-    </section>
+            <div class="bottom-grid">
+                <section class="interests">
+                    <h3>Interests</h3>
+                    <ul>
+                        <li>Civic Technology</li>
+                        <li>Public Sector Automation</li>
+                        <li>Systems Integration</li>
+                    </ul>
+                </section>
 
+                <section class="education">
+                    <h3>Education</h3>
+                    <ul>
+                        <li><strong>BSc (Hons) Computer Science</strong><br>SIT & DigiPen (Expected 2028)</li>
+                        <li><strong>Diploma in IT</strong><br>Republic Polytechnic (2021-2024)</li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
