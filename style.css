@@ -331,7 +331,7 @@ html, body {
 }
 
 /* Toggle rule to activate visibility via JavaScript */
-.project-modal-overlay.active, .experience-modal-overlay.active {
+.project-modal-overlay.active .model-card .experience-modal-overlay.active {
     opacity: 1;
     pointer-events: auto;
 }
@@ -350,7 +350,7 @@ html, body {
     transition: transform 0.2s ease-in-out;
 }
 
-.project-modal-overlay.active .modal-card .experience-modal-overlay{
+.project-modal-overlay.active .modal-card .experience-modal-overlay .model-card{
     transform: scale(1);
 }
 
