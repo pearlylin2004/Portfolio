@@ -1,4 +1,6 @@
-/* 1. Global Dark Reset & Base Layout Configuration */
+/* ==========================================================================
+   1. GLOBAL RESET & BASE THEME CONFIGURATION
+   ========================================================================== */
 html, body {
     margin: 0;
     padding: 0;
@@ -7,144 +9,43 @@ html, body {
     background-color: #0f172a; /* Deep tech slate blue background canvas */
     color: #f8fafc;            /* Crisp off-white text for easy reading */
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    scroll-behavior: smooth;   /* Moves the smooth scrolling engine here */
+    scroll-behavior: smooth;   /* Elegant smooth scrolling transitions */
 }
 
-/* Also apply it directly to your sections so it works perfectly across all navbar clicks */
+/* Page sections scroll cushioning to prevent navbar overlap */
+#home-section, 
 #about-section, 
-#education-section, 
-#projects-section {
+#projects-section,
+#education-section {
     scroll-margin-top: 80px;
 }
 
-/* 2. Container setup remains clean */
-.about-container {
-    display: flex;
-    max-width: 1100px;
-    margin: 50px auto;
-    gap: 50px; 
-    padding: 0 20px;
-}
-
-
-.sidebar h2, 
-.sidebar p, 
-.sidebar .email-container, 
-.sidebar .download-container {
-    margin-top: 0;
-    margin-bottom: 12px; /* Controls the exact gap below each item */
-}
-
-/* Left Column Panel Card */
-.sidebar {
-    flex: 1; 
-    text-align: center;
-    background-color: #1e293b; /* Slightly lighter slate for card depth */
-    padding: 30px 20px;
-    border-radius: 12px;
-    height: fit-content;      
-    border: 1px solid #334155; /* Subtle border to make it pop */
-}
-
-/* Right Column Panel Card */
-.main-content {
-    flex: 2.5; 
-    background-color: #1e293b; /* Matching lighter slate card background */
-    padding: 40px;
-    border-radius: 12px;
-    border: 1px solid #334155;
-}
-
-.profile-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%; /* Makes your photo a perfect circle */
-    object-fit: cover;
-}
-
-/* Grid for Interests and Education to sit side-by-side */
-.bottom-grid {
-    display: flex;
-    gap: 40px;
-    margin-top: 30px;
-}
-
-.interests, .education {
-    flex: 1;
-}
-
-.email-container, .download-container, .linkedin-container {
-    margin-bottom: 14px;
-    position: relative;
-    display: block;
-}
-
-/* Update your interactive text displays */
-.email-display, .download-display, .linkedin-display {
-    font-size: 14px;
-    color: #f8fafc; /* Clean off-white matching your main layout body */
-    font-weight: 500;
-    cursor: pointer;
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    transition: color 0.2s, opacity 0.2s;
-}
-
-/* Change color when hovering over the text link */
-.email-display:hover, .download-display:hover, .linkedin-display:hover{
-    color: #4ade80 !important; /* Forces tech green over browser defaults */
-    opacity: 1;
-}
-
-/* Tooltip popup box updates */
-.email-display::after, .download-display::after, .linkedin-display::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    bottom: 130%;
-    left: 50%;
-    transform: translateX(-50%) scale(0.8);
-    background-color: #f8fafc; /* Invert tooltip background to white */
-    color: #0f172a;            /* Invert tooltip text to dark slate */
-    padding: 4px 8px;
-    font-size: 11px;
-    border-radius: 4px;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.2s ease;
-}
-
-/* Show the tooltip hover effect */
-.email-display:hover::after, .download-display:hover::after, .linkedin-display:hover::after{
-    opacity: 1;
-    transform: translateX(-50%) scale(1);
-}
-
-/* Top Navbar Styling */
+/* ==========================================================================
+   2. TOP NAVIGATION BAR STYLING
+   ========================================================================== */
 .top-navbar {
     display: flex;
-    justify-content: space-between; /* Pushes logo to left, links to right */
+    justify-content: space-between; /* Pushes brand name left, menu links right */
     align-items: center;
-    background-color: #1e293b;     /* Matches your lighter slate card background */
+    background-color: #1e293b;     /* Matches lighter card backgrounds */
     padding: 15px 40px;
-    border-bottom: 1px solid #334155; /* Subtle border line under the bar */
-    position: sticky;              /* Keeps the navbar stuck to the top when scrolling */
+    border-bottom: 1px solid #334155; /* Subtle separation line */
+    position: sticky;              /* Floats permanently at the top of the viewport */
     top: 0;
-    z-index: 100;                  /* Ensures it stays layered on top of content cards */
+    z-index: 100;                  /* Layered on top of content cards */
 }
 
 .nav-logo span {
     font-weight: 700;
     font-size: 18px;
-    color: #f8fafc;                /* Crisp white text */
+    color: #f8fafc;
     letter-spacing: 0.5px;
 }
 
-/* Horizontal alignment for the link list */
 .nav-links {
-    list-style: none;              /* Removes bullet points */
+    list-style: none;              /* Removes default bullet points */
     display: flex;
-    gap: 24px;                     /* Spacing between the links */
+    gap: 24px;                     /* Grid spacing between individual items */
     margin: 0;
     padding: 0;
 }
@@ -157,7 +58,353 @@ html, body {
     transition: color 0.2s;
 }
 
-/* Hover link changes to emerald green */
 .nav-links a:hover {
-    color: #4ade80;
+    color: #4ade80;                /* Transforms to tech emerald green on hover */
+}
+
+/* ==========================================================================
+   3. LAYOUT MAIN GRID STRUCTURE
+   ========================================================================== */
+.portfolio-container {
+    display: flex;
+    max-width: 1100px;
+    margin: 50px auto;
+    gap: 50px; 
+    padding: 0 20px;
+}
+
+/* ==========================================================================
+   4. LEFT COLUMN: SIDEBAR PROFILE CARD
+   ========================================================================== */
+.sidebar {
+    flex: 1; 
+    text-align: center;
+    background-color: #1e293b; /* Elevated lighter slate box */
+    padding: 30px 20px;
+    border-radius: 12px;
+    height: fit-content;      /* Card collapses tightly to structural height */
+    border: 1px solid #334155; 
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 22px;
+}
+
+.sidebar p.title {
+    margin-top: 0;
+    margin-bottom: 4px;
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+.sidebar p.organization {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;        /* Formats profile picture into a perfect circle */
+    object-fit: cover;
+    margin-bottom: 16px;
+}
+
+/* ==========================================================================
+   5. INTERACTIVE CONTACT LINKS & TOOLTIPS (SIDEBAR)
+   ========================================================================== */
+.social-icons {
+    display: flex;
+    flex-direction: column;    /* Columns format to stack items cleanly */
+    align-items: center;
+    gap: 14px;                 
+}
+
+.email-container, 
+.download-container, 
+.linkedin-container {
+    position: relative;
+    display: inline-block;     /* Bounds wrapper dimensions directly to text content */
+}
+
+/* Base formatting for interactive displays and wrapped standard anchor links */
+.email-display, 
+.download-display, 
+.linkedin-display,
+.download-display a,
+.linkedin-display a {
+    font-size: 14px;
+    color: #f8fafc;            /* Keeps links white in baseline configuration */
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color 0.2s, opacity 0.2s;
+}
+
+/* Active Hover Transitions */
+.email-display:hover, 
+.download-display:hover, 
+.linkedin-display:hover,
+.download-display:hover a,
+.linkedin-display:hover a {
+    color: #4ade80 !important; /* Overrides native browser purple/blue presets */
+    opacity: 1;
+}
+
+/* Custom CSS Tooltip Card Rendering Engine */
+.email-display::after, 
+.download-display::after, 
+.linkedin-display::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 160%;              /* Places tooltip badge safely above the line of text */
+    left: 50%;
+    transform: translateX(-50%) scale(0.8);
+    background-color: #f8fafc; /* Crisp light container block */
+    color: #0f172a;            /* Dark text fill */
+    padding: 6px 10px;
+    font-size: 11px;
+    border-radius: 4px;
+    white-space: nowrap;       /* Prevents string breakage under tight dimensions */
+    opacity: 0;
+    pointer-events: none;      /* Ghost layer: permits click behaviors directly through to link */
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.email-display:hover::after, 
+.download-display:hover::after, 
+.linkedin-display:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+
+/* ==========================================================================
+   6. RIGHT COLUMN: MAIN CONTENT FLOW & PANELS
+   ========================================================================== */
+.main-content {
+    flex: 2.5; 
+    background-color: #1e293b; 
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+}
+
+.about h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+
+.about p {
+    font-size: 15px;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   7. FEATURED PROJECTS SECTIONS (GRID MODE)
+   ========================================================================== */
+.projects-section {
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+
+.projects-section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Auto-responsive grid tracks */
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #0f172a; /* Deep canvas dark fill inside cards */
+    padding: 24px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px); /* Vertical fluid card lift */
+    border-color: #4ade80;       /* Card border turns emerald green */
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.project-card h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #f8fafc;
+}
+
+.tech-tag {
+    font-size: 11px;
+    background-color: #1e293b;
+    color: #4ade80;             /* Highlights development framework indicators */
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+    border: 1px solid #334155;
+}
+
+.project-card p {
+    margin: 0;
+    font-size: 13px;
+    color: #94a3b8;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   8. SECONDARY LAYOUT COMPONENTS (INTERESTS & EDUCATION ROW)
+   ========================================================================== */
+.bottom-grid {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+    border-top: 1px solid #334155;
+    padding-top: 30px;
+}
+
+.interests, .education {
+    flex: 1;
+}
+
+.bottom-grid h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 18px;
+    color: #f8fafc;
+}
+
+.bottom-grid ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.bottom-grid li {
+    font-size: 14px;
+    color: #cbd5e1;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.bottom-grid li strong {
+    color: #f8fafc;
+}
+
+/* ==========================================================================
+   9. POPUP MODAL ARCHITECTURE STYLING
+   ========================================================================== */
+/* The dark transparent background overlay screen */
+.project-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.85); /* Dark tint overlay matching canvas */
+    backdrop-filter: blur(4px);               /* Frosted glass effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;                            /* Forces pop-up over sticky navbar */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* Toggle rule to activate visibility via JavaScript */
+.project-modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* The structural layout details card inside the overlay */
+.modal-card {
+    background-color: #1e293b; /* Dark slate card background match */
+    border: 1px solid #334155;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 650px;
+    padding: 35px;
+    position: relative;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+    transform: scale(0.95);
+    transition: transform 0.2s ease-in-out;
+}
+
+.project-modal-overlay.active .modal-card {
+    transform: scale(1);
+}
+
+/* Simple exit button upper-right corner */
+.close-modal-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #94a3b8;
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.1s;
+}
+
+.close-modal-btn:hover {
+    color: #4ade80; /* Glows signature emerald green on hover */
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 8px;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #f8fafc;
+    line-height: 1.4;
+}
+
+.modal-role {
+    margin: 0 0 20px 0;
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+.modal-details-list {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.modal-details-list li {
+    font-size: 14px;
+    color: #cbd5e1;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.modal-details-list li strong {
+    color: #4ade80; /* Highlight core achievement titles */
 }
