@@ -16,10 +16,11 @@
             <li><a href="#home-section">Home</a></li>
             <li><a href="#about-section">About</a></li>
             <li><a href="#projects-section">Projects</a></li>
+            <li><a href="#experience-section">Featured Experiences</a></li>
             <li><a href="#education-section">Education</a></li>
-            <li><a href="#experience-section">Experiences</a></li>
-            <li><a href="#la-section">Leadership & Activities</a></li>
             <li><a href="technical-section">Technical Skills</a></li>
+            <li><a href="#la-section">Leadership & Activities</a></li>
+            <li><a href="workE-section">Work Experiences</a></li>
         </ul>
     </nav>
 
@@ -44,7 +45,7 @@
                 
                 <div class="download-container">
                     <a href="PearlyLin_Resume.docx" download="PearlyLin_Resume.docx" id="download-text" class="download-display" data-tooltip="Click to Download">
-                        📥 My Resume (Word)
+                        📥 My Resume 
                     </a>
                 </div>
             </div>
@@ -112,7 +113,7 @@
             </div>
             
             <section id="experience-section" class="experience-section">
-                <h2>Experiences</h2>
+                <h2>Feature Experiences</h2>
                 <div class="experience-grid">
                     <div class="experience-card compact-card" onclick="openModal('nyc-modal')">
                         <div class="experience-header">
@@ -189,6 +190,34 @@
                         <li><strong>SIT Team Member</strong>, Dragon Boat Crew</li>
                     </ul>
                 </section>
+            </div>
+
+            <section id="workE-section" class="workE-section">
+                <h2>Work Experiences</h2>
+                <div class="workE-grid">
+                    <div class="workE-card compact-card" onclick="openModal('fsh-modal')">
+                        <div class="workE-header">
+                            <h3>Kitchen Crew</h3>
+                        </div>
+                        <p>Engineered an automated query system for FormSG responses and optimized email marketing workflows, successfully saving 300 man-hours annually. Click to view full pipeline metrics.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div id="fsh-modal" class="workE-modal-overlay" onclick="closeModalOnOverlay(event)">
+                <div class="modal-card">
+                    <button class="close-modal-btn compact-card" onclick="closeModal('fsh-modal')">&times;</button>
+                    <div class="modal-header">
+                        <h2>Hong Le Ptd Ltd</h2>
+                    </div>
+                    <p class="modal-role"><strong>Role:</strong> Kitchen Crew (Part Time) | Mar 2021 - Dec 2025</p>
+                    <ul class="modal-details-list">
+                        <li><strong>Operational Efficiency: </strong> Independently managed complex kitchen stations and executed workloads typically allocated to a 3-person team, maintaining high-quality outputs under pressure. </li>
+                        <li><strong>Crisis Management & Reliability: </strong> Trusted by management as a critical team resource, regularly called upon on short notice to resolve staffing shortages and maintain seamless operations. </li>
+                        <li><strong>Cross-Cultural Communication: </strong> Leveraged multilingual skills to serve as a key workplace interpreter for international team members, bridging communication gaps and ensuring operational safety and clarity.  </li>
+                        <li><strong>Time Management: </strong> Multitasked across high-volume orders simultaneously to guarantee consistent delivery within a strict 10-minute KPI. </li>
+                    </ul>
+                </div>
             </div>
         </main>
     </div>
