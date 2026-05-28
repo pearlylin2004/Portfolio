@@ -118,7 +118,8 @@ html, body {
 
 .email-container, 
 .download-container, 
-.linkedin-container {
+.linkedin-container,
+.github-container {
     position: relative;
     display: inline-block;     /* Bounds wrapper dimensions directly to text content */
 }
@@ -128,6 +129,8 @@ html, body {
 .download-display, 
 .linkedin-display,
 .download-display a,
+.linkedin-display a,
+.github-display,
 .linkedin-display a {
     font-size: 14px;
     color: #f8fafc;            /* Keeps links white in baseline configuration */
@@ -143,7 +146,9 @@ html, body {
 .download-display:hover, 
 .linkedin-display:hover,
 .download-display:hover a,
-.linkedin-display:hover a {
+.linkedin-display:hover a,
+.github-display:hover,
+.github-display:hover a {
     color: #4ade80 !important; /* Overrides native browser purple/blue presets */
     opacity: 1;
 }
@@ -151,7 +156,8 @@ html, body {
 /* Custom CSS Tooltip Card Rendering Engine */
 .email-display::after, 
 .download-display::after, 
-.linkedin-display::after {
+.linkedin-display::after,
+.github-display::after {
     content: attr(data-tooltip);
     position: absolute;
     bottom: 160%;              /* Places tooltip badge safely above the line of text */
@@ -172,7 +178,8 @@ html, body {
 
 .email-display:hover::after, 
 .download-display:hover::after, 
-.linkedin-display:hover::after {
+.linkedin-display:hover::after,
+.github-display:hover::after {
     opacity: 1;
     transform: translateX(-50%) scale(1);
 }
