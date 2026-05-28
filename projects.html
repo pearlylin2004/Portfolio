@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pearly Lin | Systems & Software Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="top-navbar">
+        <div class="nav-logo">
+            <span>Pearly Lin</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="experience.html">Experiences</a></li>
+            <li><a href="activities.html">Activities</a></li>
+        </ul>
+    </nav>
+
+    <div class="portfolio-container">
+        <aside class="sidebar">
+            <h2>Pearly Lin</h2>
+            <p class="title">Engineering Portfolio</p>
+        </aside>
+
+        <main class="main-content">
+            <h2>Featured Systems & Software Engineering Projects</h2>
+            
+            <div class="projects-grid" style="display: grid; grid-template-columns: 1fr; gap: 30px;">
+                 <div class="project-card compact-card" onclick="openModal('waterbound-modal')">
+                    <div class="project-header">
+                        <h3>WaterBound (TanukiLab) Engine</h3>
+                        <span class="tech-tag">C++ / Windows API</span>
+                    </div>
+                    <p>Developed a custom software framework in C++ highlighting a robust component-based architecture and custom, high-performance Collision Detection tracking matrices. Intercepted OS interrupts via low-level Windows lifecycles to trigger automated app safety states seamlessly on inputs like Ctrl-Alt-Del. Click to read full diagnostics rundown..</p>
+                </div>
+                <div class="project-card compact-card" onclick="openModal('candy-modal')">
+                    <div class="project-header">
+                        <h3>CandyDefender6000</h3>
+                        <span class="tech-tag">C++ / Gameplay Systems</span>
+                    </div>
+                    <p>Designed core game state transition managers and layout progression systems to handle strict entity diagnostics parameters. Executed dynamic level parameter sets to isolate and clear complex software defects under tight execution runtime budgets. Click to read full diagnostics rundown.</p>
+                </div>
+
+                <div class="project-card compact-card" onclick="openModal('donut-modal')">
+                    <div class="project-header">
+                        <h3>DunkinDonut</h3>
+                        <span class="tech-tag">C++ / Object Oriented Programming</span>
+                    </div>
+                    <p>Implemented core programmatic structural state logic for player engine growth tracking and dynamic dimension collision transformations using rigorous Object-Oriented Design principles. Fabricated pattern-driven behavioral managers and static tracking entity storage routines for a 6-person pipeline. Click to learn more about the project</p>
+                </div>
+
+            <div id="waterbound-modal" class="project-modal-overlay" onclick="closeModalOnOverlay(event)">
+                <div class="modal-card">
+                    <button class="close-modal-btn" onclick="closeModal('waterbound-modal')">&times;</button>
+                    <div class="modal-header">
+                        <h2>WaterBound (TanukiLab) - Custom Engine & Framework</h2>
+                        <span class="tech-tag">C++ / Windows API / QA</span>
+                    </div>
+                    <p class="modal-role"><strong>Role:</strong> Programmer & Collision Champion (Team of 9) | Sept 2025 - Feb 2026</p>
+                    <ul class="modal-details-list">
+                        <li><strong>Core Systems & Architecture:</strong> Developed a custom software engine in C++ featuring component-based architecture and designed a robust, optimized Collision Detection System[cite: 17].</li>
+                        <li><strong>OS & Event Integration:</strong> Engineered low-level Windows lifecycle and interruption handling, implementing window focus loss detection and automated pause states on system interrupts like Ctrl-Alt-Del.</li>
+                        <li><strong>Technical Debt & QA:</strong> Voluntarily stepped up to refactor, debug, and sanitize team-contributed code across physics and core state management systems, ensuring final application stability.</li>
+                        <li><strong>Technical Communication:</strong> Collaborated with the team to deliver technical project updates, effectively communicating architecture choices and engine capabilities to stakeholders[cite: 20].</li>
+                    </ul>
+                </div>
+            </div>
+
+             <div id="candy-modal" class="project-modal-overlay" onclick="closeModalOnOverlay(event)">
+                <div class="modal-card">
+                    <button class="close-modal-btn" onclick="closeModal('candy-modal')">&times;</button>
+                    <div class="modal-header">
+                        <h2>CandyDefender6000 - Strategy System</h2>
+                        <span class="tech-tag">C++ / OOP Design Patterns</span>
+                    </div>
+                    <p class="modal-role"><strong>Role:</strong> Systems & Level Programmer (Team of 4) | Jan 2025- Mar 2025</p>
+                    <ul class="modal-details-list">
+                        <li><strong>State Management:</strong> Implemented core game state transitions and level progression logic in C++ to handle entity updates and win/loss conditions.</li>
+                        <li><strong>System Troubleshooting:</strong> Performed extensive debugging and diagnostic testing across multiple gameplay levels to isolate and resolve software defects.</li>
+                        <li><strong>Level Integration:</strong> Configured level-specific parameters and integrated dynamic entity states to ensure stable runtime execution.</li>
+                    </ul>
+                </div>
+            </div>
+
+             <div id="donut-modal" class="project-modal-overlay" onclick="closeModalOnOverlay(event)">
+                <div class="modal-card">
+                    <button class="close-modal-btn" onclick="closeModal('donut-modal')">&times;</button>
+                    <div class="modal-header">
+                        <h2>DunkinDonut - OOP</h2>
+                        <span class="tech-tag">C++ / Object Oriented Programming</span>
+                    </div>
+                    <p class="modal-role"><strong>Role:</strong> Collision Programmer (Team of 5) | Sept 2024 - Dec 2024</p>
+                    <ul class="modal-details-list">
+                        <li><strong>Object-Oriented Design:</strong> : Implemented core logic for player growth and collision scaling in C++ using Object-Oriented Programming principles.</li>
+                        <li><strong>Entity Management:</strong> Developed centralized entity management systems and pattern-based state behaviours.</li>
+                        <li><strong>Collision:</strong> Implemented collision between players, mini donuts and boss donut.</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

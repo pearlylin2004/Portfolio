@@ -12,18 +12,6 @@ html, body {
     scroll-behavior: smooth;   /* Elegant smooth scrolling transitions */
 }
 
-/* Page sections scroll cushioning to prevent navbar overlap */
-#home-section, 
-#about-section, 
-#projects-section,
-#education-section,
-#experience-section,
-#la-section,
-#technical-section,
-#workE-section {
-    scroll-margin-top: 80px;
-}
-
 /* ==========================================================================
    2. TOP NAVIGATION BAR STYLING
    ========================================================================== */
