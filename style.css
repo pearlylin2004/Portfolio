@@ -18,7 +18,8 @@ html, body {
 #projects-section,
 #education-section,
 #experience-section,
-#la-section {
+#la-section,
+#technical-section {
     scroll-margin-top: 80px;
 }
 
@@ -284,7 +285,7 @@ html, body {
     padding-top: 30px;
 }
 
-.interests, .education, .activities, .leadership {
+.interests, .education, .activities, .leadership, .technical {
     flex: 1;
 }
 
